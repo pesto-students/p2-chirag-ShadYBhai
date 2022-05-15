@@ -1,0 +1,136 @@
+html, body {
+  height: 100%;
+  box-sizing: border-box;    /*setting this explicitly is important */
+}
+body {
+  display: flex;
+  flex-direction: column;   /*Stack the flex-items vertically */
+  background-color: #fff;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  color: #222;
+  font-size: 0.9em;
+
+}
+main {
+  flex: 1 0 auto; /*fill the available space */
+  display: flex; 
+}
+aside {
+  flex: 0 0 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; /* Direction is changed, now it works vertically. Play with this!!! */
+  align-items: center;
+  background-color: #f2f2f2;
+}
+aside i.fa {
+  font-size: 0.9em;
+}
+.content {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+}
+.music-head {
+  flex: 0 0 150px;
+  display: flex;
+  padding: 40px;
+  background-color: #4e4e4e;
+  height: 00px;
+}
+.music-list {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  list-style-type: none;
+  padding: 5px 10px 0px;  
+}
+.music-list > li {
+  display: flex;
+  padding: 0 20px;
+  min-height: 50px;
+}
+.music-list > li p {
+  flex: 0 0 25%;
+}
+.music-list > li span.catty-cloud {     /*its the same without li span */
+  border: 1px solid black;
+  font-size: 0.6em;
+  padding: 6px;
+}
+.music-list > li:nth-child(2n) {       /* the "n" means, use it on every other*/
+  background-color: #f2f2f2;
+}
+.catty-music {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  font-weight: 300;
+  color: #fff;
+  padding-left: 50px;
+}
+.catty-music div:nth-child(1) { /*pushes 2nd div to the bottom */
+  margin-bottom: auto;
+}
+.catty-music div:nth-child(2) {
+  margin-top: 0;
+}
+.catty-music div:nth-child(2) i.fa {
+  font-size: 0.9em;
+  padding: 0 0.7em;
+  font-weight: 300;
+}
+.catty-music div:nth-child(1) p:first-child {
+  font-size: 1.8em;
+  margin: 0 0 10px;
+}
+.catty-music div:nth-child(1) p:not(:first-child) {
+  font-size: 0.9em;
+  margin: 2px 0;
+}
+footer {
+  display: flex;
+  flex: 0 0 90px; /*dont grow/shrink, stay at 90px height */
+  padding: 10px;
+  color: #fff;
+  background-color: rgba(61 ,100 ,158, 0.9);
+}
+.whole-footer {
+  display: flex;
+  flex: 2 0 auto;
+  color: #000;
+}
+.item2a {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 60%;
+  padding-left: 20px;
+  margin: 0%;
+  font-weight: 300;
+  font-size: 0.9em;
+}
+.item2a p:nth-child(1) {
+  padding-top: 0;
+  margin-bottom: auto;
+}
+.item2b {
+  display: flex;
+  flex-direction: row;
+  flex: 0 0 40%;
+  color: #000;
+}
+.item2b li {
+  display: flex;
+  flex: 0 0 20%;
+  list-style-type: none;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+}
+.font {
+  font-weight: 600;
+}
+.catty-cloud {
+  color: blue;
+}
