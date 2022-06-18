@@ -1,0 +1,14 @@
+var prices = [7,1,5,3,6,4]
+
+const bestResult = function(array){
+    let maxProfit = 0;
+
+    for(let i=0;i<array.length ;i++){
+        for(let j=1;j<array.length;j++){
+            let profit = array[j]-array[i];
+            maxProfit = Math.max(maxProfit,profit)
+        }
+    }
+    return maxProfit
+}
+console.log(bestResult(prices))
