@@ -1,0 +1,15 @@
+function maximumSubArray(array){
+    
+    let maxSum = [0]
+    let accumulator = [0]
+
+    for(let i=1;i<array.length;i++){
+        let calculator = Math.max(array[i],accumulator + array[i]);
+        if(calculator > maxSum) maxSum=calculator;
+        accumulator = calculator 
+    }
+    return maxSum
+
+}
+console.log(maximumSubArray(arrayA))
+console.log(maximumSubArray(arrayB))
