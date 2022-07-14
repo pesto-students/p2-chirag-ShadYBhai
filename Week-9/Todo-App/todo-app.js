@@ -9,6 +9,19 @@ class Todo extends React.Component{
             options : props.options
         }
     }
+        componentDidMount(){
+        const json = localStorage.getItem('options')
+        const options = JSON.parse(json)
+        if(options)
+        this.setState(()=>({options}))
+    }
+
+    componentDidUpdate(prevState){
+        if(prevState.options.length !== this.state.options.length){
+            const json = JSON.stringify(this.state.options)
+            localStorage.setItem('options',json)
+        }
+    }
 
     handelRemove(){
         this.setState(()=> ({options:[]}))
@@ -68,7 +81,7 @@ const Header = (props) =>{
         </div>
     )
 }
-IndecisionApp.defaultProps = {
+Todo.defaultProps = {
     options: []
   };
   
