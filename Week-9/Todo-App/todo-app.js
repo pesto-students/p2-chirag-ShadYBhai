@@ -1,4 +1,4 @@
-class IndecisionApp extends React.Component{
+class Todo extends React.Component{
     constructor(props){
         super(props)
         this.handelRemove = this.handelRemove.bind(this)
@@ -142,4 +142,4 @@ class AddOptions extends React.Component{
 }
 const root = ReactDOM.createRoot(document.getElementById('app'))
 
-root.render(<IndecisionApp/>)
+root.render(<Todo/>)
