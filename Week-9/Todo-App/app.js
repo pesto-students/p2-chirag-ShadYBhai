@@ -11,7 +11,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var IndecisionApp = function (_React$Component) {
     _inherits(IndecisionApp, _React$Component);
 
-    function IndecisionApp(props) {
+    function Todo(props) {
         _classCallCheck(this, IndecisionApp);
 
         var _this = _possibleConstructorReturn(this, (IndecisionApp.__proto__ || Object.getPrototypeOf(IndecisionApp)).call(this, props));
@@ -26,7 +26,7 @@ var IndecisionApp = function (_React$Component) {
         return _this;
     }
 
-    _createClass(IndecisionApp, [{
+    _createClass(Todo, [{
         key: 'handelRemove',
         value: function handelRemove() {
             this.setState(function () {
@@ -222,4 +222,4 @@ var AddOptions = function (_React$Component2) {
 
 var root = ReactDOM.createRoot(document.getElementById('app'));
 
-root.render(React.createElement(IndecisionApp, null));
+root.render(React.createElement(Todo, null));
