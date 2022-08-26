@@ -1,0 +1,37 @@
+.App {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+
+  }
+  .add{
+    width: 100px;
+    margin-bottom:5px;
+    background-color:#8136d1;
+    color:white;
+    border:none;
+    border-radius: 20px;
+    padding:10px
+
+  }
+  .reset {
+    width: 100px;
+    background-color:#9b8b8b;
+    color:black;
+    padding:10px;
+    border-radius: 20px;
+    border:none;
+
+}
+
+  .display{
+
+    height: 200px;
+    width: 200px;
+    background-color:  rgb(181, 206, 235);
+    margin: 10px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+  }
