@@ -32,10 +32,18 @@ app.get('/userTransactions', (req,res)=>{
 })
 
 app.post('/createTransaction',(req,res)=>{
-    const {user_id,amount_type_id,amount,asset_id,created,} = req.query
+    const {user_id,amount_type_id,amount,asset_id,created} = req.query
     
     createNewTransaction(req.query ,result => res.send(result))
 })
+
+app.get('/getTransactionByDate,(req,res)=>{
+      
+     const {user_id,created} = req.query
+    
+     getTransactionByDate(req.query, result=>res.send(result))
+            
+        })
 
 app.delete('/deleteTransaction',(req,res)=>{
     const {userId} = req.query
