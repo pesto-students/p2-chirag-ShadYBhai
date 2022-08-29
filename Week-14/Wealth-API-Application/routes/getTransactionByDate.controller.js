@@ -5,7 +5,7 @@ const getTransactionByDate = (params,callback) => {
 
     const connection = createConnection()
 
-    const query = `select asset_id, amount, amount_type_id from transaction where created='${created}';`
+    const query = `select first_name, asset_id, amount, amount_type_id from user_table join transaction where created='${created}';`
 
     connection.query(query, (err, result)=>{
         if(result){
