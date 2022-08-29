@@ -37,7 +37,7 @@ app.post('/createTransaction',(req,res)=>{
     createNewTransaction(req.query ,result => res.send(result))
 })
 
-app.get('/getTransactionByDate,(req,res)=>{
+app.get('/getTransactionByDate',(req,res)=>{
       
      const {user_id,created} = req.query
     
